@@ -1,5 +1,6 @@
 <template>
   <div>
+    hello Typescript
     Hello Typescript {{name}} : {{val}}
     <div class="button" @click="increment">+</div>
     <div class="button" @click="decrement">-</div>
