@@ -1,14 +1,13 @@
-<template>
-  <div>
+import Vue from 'vue';
+import '../css/main.css';
+export default Vue.extend({
+  template: `  <div>
     hello Typescript
     Hello Typescript {{name}} : {{val}}
     <div class="button" @click="increment">+</div>
     <div class="button" @click="decrement">-</div>
-  </div>
-</template>
-<script lang="ts">
-import Vue from 'vue'
-export default Vue.extend({
+    <div class="main.name">css Module</div>
+  </div>`,
   data: () => ({
     name: 'ts',
     val: 0
@@ -17,16 +16,10 @@ export default Vue.extend({
     increment() {
       this.val++;
     },
-    decrement(){
+    decrement() {
       if (this.val > 1) {
         this.val--;
       }
     }
   }
-})
-</script>
-<style scoped>
- .button {display: inline-block;padding: 5px 20px;line-height: 32px;border: 1px solid #ff6200;color: #ff6200;text-align: center;background: #fff0}
-</style>
-
-
+});
